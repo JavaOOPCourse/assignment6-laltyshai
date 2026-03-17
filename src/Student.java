@@ -4,8 +4,11 @@ public class Student implements Comparable<Student> {
     private int age;
 
     // TODO: Task 1 — Создай конструктор, который принимает имя, GPA и возраст
-    public Student(String name, double gpa, int age) {
+    public Student(String nam, double gp, int ag) {
         // заглушка
+        name=nam;
+        gpa=gp;
+        age=ag;
     }
 
     public String getName() { return name; }
@@ -15,18 +18,19 @@ public class Student implements Comparable<Student> {
     // TODO: Task 1 — Добавь возможность изменить GPA
     public void setGpa(double newGpa) {
         // заглушка
+        gpa=newGpa;
     }
 
     // TODO: Task 1 (Sorting) — Реализуй Comparable по GPA (по возрастанию)
     @Override
     public int compareTo(Student other) {
         // заглушка — верни правильное значение сравнения
-        return 0;
+        return Double.compare(this.gpa, other.gpa);
     }
 
     @Override
     public String toString() {
         // TODO: Сделай красивый вывод
-        return "";
+        return "student name:  " +name+",  gpa:  "+gpa+"  , age: "+age;
     }
 }
